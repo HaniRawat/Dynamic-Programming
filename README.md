@@ -1,4 +1,4 @@
-#Dynamic Programming
+# Dynamic Programming
 
 Data Structures and Algorithms
 This repository contains my solutions to various Data Structures and Algorithms (DSA) questions related to Dynamic Programming. Dynamic Programming is a method used for solving optimization problems by breaking them down into simpler subproblems, storing the solutions of subproblems to avoid redundant calculations. It's a fundamental technique widely applied in fields like competitive programming, resource allocation, and problem optimization.
