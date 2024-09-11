@@ -27,6 +27,7 @@ class Solution
     vector<long long> printFibb(int n) 
     {
         vector<long long> dp(n+1, -1);
+        //top down approach / memoisation
         
         solve(n, dp);
         dp[0] = 0;
@@ -34,6 +35,28 @@ class Solution
         
         vector<long long> res;
         
+        for(int i=1; i<=n; i++){
+            res.push_back(dp[i]);
+        }
+        return res;
+    }
+
+    vector<long long> printFibb(int n) 
+    {
+        
+        //bottom up approach / tabulation
+        vector<long long> dp(n+1, -1);
+        
+        
+        dp[0] = 0;
+        dp[1] = 1;
+        
+        
+        
+        for(int i=2; i<=n; i++){
+            dp[i] = dp[i-1]+dp[i-2];
+        }
+        vector<long long> res;
         for(int i=1; i<=n; i++){
             res.push_back(dp[i]);
         }
