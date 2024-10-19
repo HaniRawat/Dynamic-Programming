@@ -12,7 +12,7 @@ public:
 
     int solve(vector<vector<int>> &matrix, int n, int i, int j){
         
-        if(i>=n || j>=n || j<0)
+        if(i>=n || j>=n || j<0 || i<0)
             return 0;
             
         int right = 0;
