@@ -42,3 +42,14 @@ vector<int> Solution::rodCut(int len, vector<int> &cuts) {
     return v;
     
 }
+The provided code is used to find the minimum cost required to cut a rod of length 'len' at specified positions given in the 'cuts' vector. It uses dynamic programming and recursion to optimize the calculation.
+
+The solve function is a recursive function that calculates the minimum cost required to cut a rod from position 'i' to position 'j'. It uses memoization to store the results of subproblems to avoid redundant calculations.
+
+The solve2 function is also a recursive function that populates a vector 'v' with the positions where the cuts should be made to achieve the minimum cost of cutting the rod from position 'i' to position 'j'.
+
+The rodCut function first adds the start and end points of the rod (0 and 'len') to the 'cuts' vector, then sorts it. It initializes two 2D vectors, 'dp' and 'pos', for memoization and storing optimal cut positions, respectively.
+
+The rodCut function then calculates the minimum cost required to cut the entire rod (from 0 to 'm-1') using the 'solve' function and stores the result in the variable 'cost'.
+
+Finally, it calls the solve2 function to determine the positions where the cuts should be made, and returns the resulting vector containing the optimal positions to make the cuts.
