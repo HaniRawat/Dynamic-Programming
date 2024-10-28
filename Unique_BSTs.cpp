@@ -11,10 +11,10 @@ class Solution
 
     // The number of ways would be:
 
-    //     choose one node as root
-    //     choose M nodes as part of the left subtree
-    //     right subtree would be left with N-1-M nodes.
-    //     Go to steps one until we left with one nodes(only one way).
+    //     1. choose one node as root
+    //     2. choose M nodes as part of the left subtree
+    //     3. right subtree would be left with N-1-M nodes.
+    //     4. Go to steps one until we left with one nodes(only one way).
     //     => [{0,ROOT,N-1}, {1,ROOT, N-2}, {2, ROOT,N-3} ...... {N-3,ROOT, 2}, {N-2,ROOT,1}, {N-1,ROOT, 0}]
 
     //     if we have no node or 1 node, we can create only 1 BST. 
