@@ -17,14 +17,16 @@ public:
         vector<long long int>dp(N+1, 0);
         
         for(int i=1; i<=6; i++){
-            dp[i] = i;
+            dp[i] = i; // Option 1: Press 'A'
         }
         
         for(int i=7; i<=N; i++){
+            
+            // Option 2: Perform Ctrl-A, Ctrl-C, and multiple Ctrl-Vs
             for(int j=i-3; j>=1; j--){
                 
                 int curr = dp[j]*(i-j-1);
-                
+                // If we copy all from dp[j-2] and paste (i - j) times
                 if(curr>dp[i])
                     dp[i] = curr;
             }
